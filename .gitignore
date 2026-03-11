@@ -1,0 +1,10 @@
+# --- Visual Studio ---
+.vs/
+[Bb]in/
+[Ob]j/
+*.user
+*.suo
+*.sln.docstates
+
+# --- VS Code ---
+.vscode/

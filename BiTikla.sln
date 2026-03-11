@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36930.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiTikla.EntityLayer", "BiTikla.EntityLayer\BiTikla.EntityLayer.csproj", "{176905FC-8C29-4EF5-8EC4-DB6E0C8AD07F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiTikla.DataAccessLayer", "BiTikla.DataAccessLayer\BiTikla.DataAccessLayer.csproj", "{254D5189-14CF-4427-BB36-33FB7EF5AB4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiTikla.BusinessLayer", "BiTikla.BusinessLayer\BiTikla.BusinessLayer.csproj", "{FCCF3992-36F7-4B67-AA81-68649866C955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiTikla.WebApi", "BiTikla.WebApi\BiTikla.WebApi.csproj", "{D1DF335B-3F88-42BC-958F-158505C1FDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiTikla.ConfigurationLayer", "BiTikla.ConfigurationLayer\BiTikla.ConfigurationLayer.csproj", "{0E557111-A5BB-4093-9504-A12EB85F7BA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{176905FC-8C29-4EF5-8EC4-DB6E0C8AD07F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176905FC-8C29-4EF5-8EC4-DB6E0C8AD07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176905FC-8C29-4EF5-8EC4-DB6E0C8AD07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176905FC-8C29-4EF5-8EC4-DB6E0C8AD07F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{254D5189-14CF-4427-BB36-33FB7EF5AB4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{254D5189-14CF-4427-BB36-33FB7EF5AB4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{254D5189-14CF-4427-BB36-33FB7EF5AB4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{254D5189-14CF-4427-BB36-33FB7EF5AB4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCF3992-36F7-4B67-AA81-68649866C955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCF3992-36F7-4B67-AA81-68649866C955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCF3992-36F7-4B67-AA81-68649866C955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCF3992-36F7-4B67-AA81-68649866C955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1DF335B-3F88-42BC-958F-158505C1FDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1DF335B-3F88-42BC-958F-158505C1FDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1DF335B-3F88-42BC-958F-158505C1FDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1DF335B-3F88-42BC-958F-158505C1FDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E557111-A5BB-4093-9504-A12EB85F7BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E557111-A5BB-4093-9504-A12EB85F7BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E557111-A5BB-4093-9504-A12EB85F7BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E557111-A5BB-4093-9504-A12EB85F7BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1632588-4959-49CE-8E96-1F26C0AA7B9D}
+	EndGlobalSection
+EndGlobal

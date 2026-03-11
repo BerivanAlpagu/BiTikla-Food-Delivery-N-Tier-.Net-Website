@@ -1,0 +1,6 @@
+@BiTikla.WebApi_HostAddress = http://localhost:5001
+
+GET {{BiTikla.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
