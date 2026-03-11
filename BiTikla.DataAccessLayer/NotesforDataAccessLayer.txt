@@ -1,0 +1,6 @@
+﻿ Neden böyle yaptık?
+
+DbContext → EF Core'un veritabanı bağlantı merkezi, tüm tablolar burada
+IRepository → "Şu metodlar mutlaka olmalı" diyen interface
+BaseRepository → Ortak metodları bir kez yazdık, her entity tekrar yazmak zorunda değil
+Ayrı Repository'ler → İleride IOrderRepository'ye özel metod ekleyebilirsin (örneğin GetOrdersByUserId)

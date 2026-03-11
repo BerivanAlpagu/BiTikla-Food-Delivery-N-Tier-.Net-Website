@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiTikla.BusinessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8aa08105f95e5dc86a542d65ec4e6ac71e32d7f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+826f08cb13ca1ac43a6bfc1ec6f4c25421034f40")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiTikla.BusinessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiTikla.BusinessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
