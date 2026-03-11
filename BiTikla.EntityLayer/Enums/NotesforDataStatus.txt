@@ -1,0 +1,2 @@
+﻿DataStatus → Her kayıt silindiğinde veritabanından fiziksel olarak silmiyoruz, sadece Deleted işaretliyoruz. 
+Yemek Sepeti'nde bir restoranı kapattığında veriler kaybolmasın istiyoruz.

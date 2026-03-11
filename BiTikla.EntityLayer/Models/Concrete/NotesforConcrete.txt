@@ -1,0 +1,18 @@
+﻿1. 
+
+2. Neden böyle yaptık?
+
+virtual → Lazy Loading için, ilişkili veriyi sadece lazım olunca çeker
+ICollection<T> → Bir restoranın birden fazla kategorisi olabilir (one-to-many)
+Latitude/Longitude → Leaflet haritada kurye ve restoranı göstermek için
+int? CourierId → ? işareti null olabilir demek, sipariş ilk oluştuğunda kurye henüz atanmamış
+
+3.	Ne ne YAPAR?
+AppUser       → Müşteriler
+Restaurant    → Restoranlar
+Category      → Yemek kategorileri (Pizza, Burger vb.)
+MenuItem      → Menü ürünleri
+Order         → Siparişler
+OrderDetail   → Sipariş detayı (hangi üründen kaç tane)
+Courier       → Kuryeler
+Address       → Kullanıcı adresleri

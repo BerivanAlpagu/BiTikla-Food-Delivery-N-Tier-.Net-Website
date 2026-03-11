@@ -5,6 +5,7 @@
 *.user
 *.suo
 *.sln.docstates
+.txt
 
 # --- VS Code ---
 .vscode/

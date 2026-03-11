@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BiTikla.EntityLayer.Enums
 {
-    internal class DataStatus
+    public enum DataStatus
     {
+        Inserted = 1,
+        Updated = 2,
+        Deleted = 3
     }
 }

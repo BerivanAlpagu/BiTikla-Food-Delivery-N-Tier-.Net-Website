@@ -1,0 +1,3 @@
+﻿BaseEntity → Her tabloda Id, CreatedDate gibi ortak alanlar olacak. 
+Bunu her sınıfa tekrar tekrar yazmamak için abstract bir base sınıf yaptık. 
+abstract demek → bu sınıftan direkt nesne üretemezsin, sadece miras alınır.
