@@ -1,0 +1,3 @@
+﻿1. Ne yapıyoruz?
+BiTiklaConfigurationLayer projesine Entity Framework'e "tabloları nasıl oluşturacağını" söylüyoruz. 
+Kolon tipleri, zorunlu alanlar, ilişkiler burada tanımlanıyor.

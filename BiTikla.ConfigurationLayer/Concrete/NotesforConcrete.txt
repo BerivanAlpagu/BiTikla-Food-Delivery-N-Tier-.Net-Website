@@ -1,0 +1,6 @@
+﻿. Neden böyle yaptık?
+
+IsRequired() → Veritabanında NOT NULL demek
+HasMaxLength() → Kolon uzunluğu sınırı
+HasColumnType("numeric(18,2)") → PostgreSQL'de para tipi için
+BaseConfiguration → Ortak ayarları tekrar yazmamak için

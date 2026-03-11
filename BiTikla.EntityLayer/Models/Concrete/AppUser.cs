@@ -13,8 +13,8 @@ namespace BiTikla.EntityLayer.Models.Concrete
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Role { get; set; } // Customer, Admin, CourierManager
+        public string? PhoneNumber { get; set; }
+        public string? Role { get; set; } // Customer, Admin, CourierManager
 
         // Navigation Properties
         public virtual ICollection<Order> Orders { get; set; }
