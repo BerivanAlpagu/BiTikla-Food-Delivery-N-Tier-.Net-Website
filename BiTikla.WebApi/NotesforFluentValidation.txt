@@ -1,0 +1,7 @@
+﻿FluentValidation
+1. Ne yapıyoruz?
+Kullanıcı API'ye veri gönderirken boş alan, çok kısa isim, geçersiz email gibi hataları otomatik yakalıyoruz.
+
+NuGet paketleri ekle
+BiTikla.WebApi'ye sağ tıkla → Manage NuGet Packages:
+FluentValidation.AspNetCore

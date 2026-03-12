@@ -1,0 +1,6 @@
+﻿. Neden böyle yaptık?
+
+[ApiController] → Otomatik validasyon ve model binding
+[Route("api/[controller]")] → URL otomatik /api/restaurant olur
+NotFound → 404 HTTP kodu döner
+Ok → 200 HTTP kodu döner

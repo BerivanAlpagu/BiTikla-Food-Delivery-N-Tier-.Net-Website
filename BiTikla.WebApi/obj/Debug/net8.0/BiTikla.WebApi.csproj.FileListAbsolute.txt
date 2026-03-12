@@ -145,3 +145,6 @@ C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\ref\BiTikla.W
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Bogus.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
