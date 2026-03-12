@@ -1,0 +1,12 @@
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\bin\Debug\net8.0\BiTikla.EntityLayer.deps.json
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\bin\Debug\net8.0\BiTikla.EntityLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\bin\Debug\net8.0\BiTikla.EntityLayer.pdb
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.sourcelink.json
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\refint\BiTikla.EntityLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\BiTikla.EntityLayer.pdb
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.EntityLayer\obj\Debug\net8.0\ref\BiTikla.EntityLayer.dll

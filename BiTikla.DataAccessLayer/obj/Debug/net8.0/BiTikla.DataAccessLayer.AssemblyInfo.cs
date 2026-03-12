@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8418d5b8-37ca-42de-9dfb-4f488a6ebbc2")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+826f08cb13ca1ac43a6bfc1ec6f4c25421034f40")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75076c0d8ece6e3261d67a21c391af680e62f9af")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

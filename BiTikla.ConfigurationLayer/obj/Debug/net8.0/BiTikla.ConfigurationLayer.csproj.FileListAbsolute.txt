@@ -1,0 +1,16 @@
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\bin\Debug\net8.0\BiTikla.ConfigurationLayer.deps.json
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\bin\Debug\net8.0\BiTikla.ConfigurationLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\bin\Debug\net8.0\BiTikla.ConfigurationLayer.pdb
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\bin\Debug\net8.0\BiTikla.EntityLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\bin\Debug\net8.0\BiTikla.EntityLayer.pdb
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.sourcelink.json
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla..E37729DE.Up2Date
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\refint\BiTikla.ConfigurationLayer.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\BiTikla.ConfigurationLayer.pdb
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.ConfigurationLayer\obj\Debug\net8.0\ref\BiTikla.ConfigurationLayer.dll
