@@ -1,0 +1,12 @@
+﻿Ne yapıyoruz?
+İş kurallarını yazıyoruz. Bu katman:
+
+DTO'lar → Katmanlar arası veri taşıma nesneleri
+AutoMapper → Entity ↔ DTO dönüşümü
+Manager Pattern → İş kuralları (soft delete, tarih atama vb.)
+
+**BiTikla.BusinessLayer'a NuGet paketleri ekle:**
+
+AutoMapper
+FluentValidation
+FluentValidation.AspNetCore
