@@ -1,0 +1,6 @@
+﻿3. Neden DTO kullanıyoruz?
+Entity'leri direkt dışarı vermiyoruz çünkü:
+
+AppUser entity'sinde Password var — bunu API'den dönmek tehlikeli!
+Navigation property'ler (virtual ICollection<Order>) JSON'da sonsuz döngüye girer
+DTO sadece lazım olan alanları taşır, temiz ve güvenli

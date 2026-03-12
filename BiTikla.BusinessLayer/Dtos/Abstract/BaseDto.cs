@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using BiTikla.EntityLayer.Enums;
+
 namespace BiTikla.BusinessLayer.Dtos.Abstract
 {
-    internal class BaseDto
+    public abstract class BaseDto
     {
+        public int Id { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime? UpdatedDate { get; set; }
+        public DateTime? DeletedDate { get; set; }
+        public DataStatus Status { get; set; }
     }
 }

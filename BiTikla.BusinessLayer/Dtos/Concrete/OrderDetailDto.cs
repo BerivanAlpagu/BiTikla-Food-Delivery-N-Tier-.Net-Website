@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using BiTikla.BusinessLayer.Dtos.Abstract;
+
 namespace BiTikla.BusinessLayer.Dtos.Concrete
 {
-    internal class OrderDetailDto
+    public class OrderDetailDto : BaseDto
     {
+        public int Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public int OrderId { get; set; }
+        public int MenuItemId { get; set; }
     }
 }
