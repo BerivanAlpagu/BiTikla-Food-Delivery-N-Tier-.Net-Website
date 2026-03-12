@@ -4,9 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using AutoMapper;
+using BiTikla.BusinessLayer.Dtos.Concrete;
+using BiTikla.BusinessLayer.Managers.Abstract;
+using BiTikla.DataAccessLayer.Repositories.Abstract;
+using BiTikla.EntityLayer.Models.Concrete;
+
 namespace BiTikla.BusinessLayer.Managers.Concrete
 {
-    internal class OrderManager
+    public class OrderManager : BaseManager<OrderDto, Order>, IOrderManager
     {
+        public OrderManager(IOrderRepository repository, IMapper mapper)
+            : base(repository, mapper)
+        {
+        }
     }
 }

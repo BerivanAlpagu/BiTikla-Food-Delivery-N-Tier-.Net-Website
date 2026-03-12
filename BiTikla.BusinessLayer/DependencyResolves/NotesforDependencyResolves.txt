@@ -1,0 +1,12 @@
+﻿DependencyResolvers'de Ne yapıyoruz?
+
+Tüm katmanları birbirine bağlıyoruz. "Hangi interface gelince hangi class çalışsın" diyoruz. 
+Bunu Program.cs'e tek tek yazmak yerine düzenli klasörde topluyoruz.
+
+ Neden böyle yaptık?
+
+static class → Nesne üretmeden direkt çağırıyoruz
+
+this IServiceCollection → Program.cs'de builder.Services.AddRepositoryService() diye çağırabiliyoruz
+
+AddScoped → Her HTTP isteğinde bir kez oluştur, istek bitince yok et demek

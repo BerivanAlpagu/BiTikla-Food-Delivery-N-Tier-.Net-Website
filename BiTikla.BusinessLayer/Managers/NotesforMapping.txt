@@ -1,1 +1,6 @@
-﻿
+﻿3. Neden böyle yaptık?
+
+DtoMappingProfile → ReverseMap() ile çift yönlü dönüşüm, Entity→DTO ve DTO→Entity
+BaseManager → Ortak iş kuralları bir yerde, her manager tekrar yazmıyor
+SoftDelete → Veriyi silmiyoruz, Deleted işaretliyoruz — sipariş geçmişi kaybolmasın
+HardDelete → Sadece zaten pasif olan kayıtları fiziksel sil

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using BiTikla.BusinessLayer.Dtos.Concrete;
+
 namespace BiTikla.BusinessLayer.Managers.Abstract
 {
-    internal interface IAppUserManager
+    public interface IAppUserManager : IManager<AppUserDto>
     {
     }
 }

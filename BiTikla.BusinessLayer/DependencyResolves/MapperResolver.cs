@@ -4,9 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BiTikla.BusinessLayer.DependencyResolves
+using BiTikla.BusinessLayer.MappingProfiles;
+using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+
+namespace BiTikla.BusinessLayer.DependencyResolvers
 {
-    internal class MapperResolver
+    public static class MapperResolver
     {
+        public static void AddMapperService(this IServiceCollection services)
+        {
+            services.AddSingleton(provider => new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<DtoMappingProfile>();
+            }).CreateMapper());
+        }
     }
 }
