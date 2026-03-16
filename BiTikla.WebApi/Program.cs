@@ -1,7 +1,8 @@
 using BiTikla.BusinessLayer.DependencyResolvers;
 using BiTikla.DataAccessLayer.Context;
-using FluentValidation;
+using BiTikla.WebApi.SeedData;
 using BiTikla.WebApi.Validators;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +30,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider
+        .GetRequiredService<BiTiklaDbContext>();
+    await DataSeeder.SeedAsync(context);
+}
+
+//app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

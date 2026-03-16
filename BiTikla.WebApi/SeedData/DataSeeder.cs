@@ -3,7 +3,7 @@ using BiTikla.DataAccessLayer.Context;
 using BiTikla.EntityLayer.Enums;
 using BiTikla.EntityLayer.Models.Concrete;
 
-namespace BiTikla.WebApi.Seed
+namespace BiTikla.WebApi.SeedData
 {
     public static class DataSeeder
     {
@@ -25,11 +25,12 @@ namespace BiTikla.WebApi.Seed
                     IsAvailable = faker.Random.Bool(),
                     CurrentLatitude = faker.Random.Double(41.0, 41.2),
                     CurrentLongitude = faker.Random.Double(28.8, 29.2),
-                    CreatedDate = DateTime.Now,
+                    CreatedDate = DateTime.UtcNow,
                     Status = DataStatus.Inserted
                 });
             }
             await context.Couriers.AddRangeAsync(couriers);
+            await context.SaveChangesAsync();
 
             // 2. Kullanıcılar
             var users = new List<AppUser>();
@@ -38,11 +39,11 @@ namespace BiTikla.WebApi.Seed
                 users.Add(new AppUser
                 {
                     UserName = faker.Internet.UserName(),
-                    Email = faker.Internet.Email(),
+                    Email = faker.Internet.Email(faker.Name.FirstName(), faker.Name.LastName(), "gmail.com"),
                     Password = faker.Lorem.Word(),
                     PhoneNumber = "05" + faker.Random.Number(100000000, 999999999).ToString(),
                     Role = faker.Random.ArrayElement(new[] { "Customer", "Admin" }),
-                    CreatedDate = DateTime.Now,
+                    CreatedDate = DateTime.UtcNow,
                     Status = DataStatus.Inserted
                 });
             }
@@ -63,7 +64,7 @@ namespace BiTikla.WebApi.Seed
                 {
                     Name = faker.Random.ArrayElement(restaurantNames) + " " + faker.Address.City(),
                     Description = faker.Lorem.Sentence(),
-                    ImageUrl = faker.Internet.Url(),
+                    ImageUrl = "https://picsum.photos/200",
                     Address = faker.Address.StreetAddress(),
                     Latitude = faker.Random.Double(41.0, 41.2),
                     Longitude = faker.Random.Double(28.8, 29.2),
@@ -71,7 +72,7 @@ namespace BiTikla.WebApi.Seed
                     DeliveryFee = faker.Random.Decimal(5, 25),
                     EstimatedDeliveryTime = faker.Random.Int(15, 60),
                     Rating = Math.Round(faker.Random.Double(3.0, 5.0), 1),
-                    CreatedDate = DateTime.Now,
+                    CreatedDate = DateTime.UtcNow,
                     Status = DataStatus.Inserted
                 });
             }
@@ -92,9 +93,9 @@ namespace BiTikla.WebApi.Seed
                     categories.Add(new Category
                     {
                         CategoryName = faker.Random.ArrayElement(categoryNames),
-                        ImageUrl = faker.Internet.Url(),
+                        ImageUrl = "https://picsum.photos/200",
                         RestaurantId = restaurant.Id,
-                        CreatedDate = DateTime.Now,
+                        CreatedDate = DateTime.UtcNow,
                         Status = DataStatus.Inserted
                     });
                 }
@@ -113,10 +114,10 @@ namespace BiTikla.WebApi.Seed
                         Name = faker.Commerce.ProductName(),
                         Description = faker.Lorem.Sentence(),
                         Price = faker.Random.Decimal(20, 200),
-                        ImageUrl = faker.Internet.Url(),
+                        ImageUrl = "https://picsum.photos/200",
                         IsAvailable = true,
                         CategoryId = category.Id,
-                        CreatedDate = DateTime.Now,
+                        CreatedDate = DateTime.UtcNow,
                         Status = DataStatus.Inserted
                     });
                 }
@@ -138,7 +139,7 @@ namespace BiTikla.WebApi.Seed
                     AppUserId = users[random.Next(users.Count)].Id,
                     RestaurantId = restaurants[random.Next(restaurants.Count)].Id,
                     CourierId = couriers[random.Next(couriers.Count)].Id,
-                    CreatedDate = DateTime.Now,
+                    CreatedDate = DateTime.UtcNow,
                     Status = DataStatus.Inserted
                 });
             }
