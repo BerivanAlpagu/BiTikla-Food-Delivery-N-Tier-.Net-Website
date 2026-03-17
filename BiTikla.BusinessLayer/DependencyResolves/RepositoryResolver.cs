@@ -19,6 +19,7 @@ namespace BiTikla.BusinessLayer.DependencyResolvers
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<ICourierRepository, CourierRepository>();
             services.AddScoped<IMenuItemRepository, MenuItemRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
         }
     }
 }

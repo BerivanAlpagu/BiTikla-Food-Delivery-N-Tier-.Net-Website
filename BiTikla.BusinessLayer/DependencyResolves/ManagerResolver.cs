@@ -18,6 +18,8 @@ namespace BiTikla.BusinessLayer.DependencyResolvers
             services.AddScoped<IRestaurantManager, RestaurantManager>();
             services.AddScoped<IOrderManager, OrderManager>();
             services.AddScoped<ICourierManager, CourierManager>();
+            services.AddScoped<IMenuItemManager, MenuItemManager>();
+            services.AddScoped<ICategoryManager, CategoryManager>();
         }
     }
 }

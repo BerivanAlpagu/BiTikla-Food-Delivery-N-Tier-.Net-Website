@@ -16,6 +16,19 @@ builder.Services.AddRepositoryService();
 builder.Services.AddManagerService();
 builder.Services.AddMapperService();
 
+// 3. CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact", policy =>
+    {
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "http://localhost:3001"
+        )
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 // 4. Controller
 builder.Services.AddControllers();
@@ -30,6 +43,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Seed Data
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider
@@ -37,6 +51,7 @@ using (var scope = app.Services.CreateScope())
     await DataSeeder.SeedAsync(context);
 }
 
+app.UseCors("AllowReact");
 //app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
