@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf442467ad0f058a9e0022e2d6e9d47548fbdfc5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3034c2e386747eea80d1d7dbd9fb8d1c80de2618")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiTikla.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

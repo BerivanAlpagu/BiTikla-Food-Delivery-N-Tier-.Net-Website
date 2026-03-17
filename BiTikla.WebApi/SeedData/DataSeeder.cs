@@ -146,6 +146,27 @@ namespace BiTikla.WebApi.SeedData
             await context.Orders.AddRangeAsync(orders);
             await context.SaveChangesAsync();
 
+            // 7. Adresler
+            var addresses = new List<Address>();
+            foreach (var user in users.Take(20)) // ilk 20 kullanıcıya adres ekle
+            {
+                addresses.Add(new Address
+                {
+                    Title = "Ev",
+                    FullAddress = faker.Address.StreetAddress(),
+                    City = "İstanbul",
+                    District = faker.Random.ArrayElement(new[] {
+            "Kadıköy", "Beşiktaş", "Şişli", "Üsküdar", "Maltepe" }),
+                    Latitude = faker.Random.Double(41.0, 41.2),
+                    Longitude = faker.Random.Double(28.8, 29.2),
+                    AppUserId = user.Id,
+                    CreatedDate = DateTime.UtcNow,
+                    Status = DataStatus.Inserted
+                });
+            }
+            await context.Addresses.AddRangeAsync(addresses);
+            await context.SaveChangesAsync();
+
             Console.WriteLine("✅ Seed data başarıyla oluşturuldu!");
         }
     }
