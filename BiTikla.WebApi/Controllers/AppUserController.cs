@@ -1,4 +1,4 @@
-﻿using BiTikla.BusinessLayer.Dtos.Concrete;
+using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +8,11 @@ namespace BiTikla.WebApi.Controllers
     [ApiController]
     public class AppUserController : ControllerBase
     {
+        public class LoginDto {
+            public string Email { get; set; }
+            public string Password { get; set; }
+        }
+
         private readonly IAppUserManager _appUserManager;
 
         public AppUserController(IAppUserManager appUserManager)
@@ -28,6 +33,15 @@ namespace BiTikla.WebApi.Controllers
             var value = await _appUserManager.GetByIdAsync(id);
             if (value == null) return NotFound("Kullanıcı bulunamadı");
             return Ok(value);
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            var values = await _appUserManager.GetAllAsync();
+            var user = values.FirstOrDefault(x => x.Email == loginDto.Email && x.Password == loginDto.Password);
+            if (user == null) return Unauthorized(new { message = "Email veya şifre hatalı" });
+            return Ok(user);
         }
 
         [HttpPost]

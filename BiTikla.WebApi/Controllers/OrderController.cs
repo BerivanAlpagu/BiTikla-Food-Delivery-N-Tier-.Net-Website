@@ -1,4 +1,4 @@
-﻿using BiTikla.BusinessLayer.Dtos.Concrete;
+using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +30,14 @@ namespace BiTikla.WebApi.Controllers
             return Ok(value);
         }
 
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetByUserId(int userId)
+        {
+            var values = await _orderManager.GetAllAsync();
+            var userOrders = values.Where(x => x.AppUserId == userId).ToList();
+            return Ok(userOrders);
+        }
+
         [HttpGet("actives")]
         public IActionResult GetActives()
         {
@@ -41,7 +49,7 @@ namespace BiTikla.WebApi.Controllers
         public async Task<IActionResult> Create(OrderDto dto)
         {
             await _orderManager.CreateAsync(dto);
-            return Ok("Sipariş oluşturuldu");
+            return Ok(new { id = dto.Id, message = "Sipariş oluşturuldu" });
         }
 
         [HttpPut]

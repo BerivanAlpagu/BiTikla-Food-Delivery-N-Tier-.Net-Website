@@ -135,7 +135,6 @@ C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\staticwebasse
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\BiTikla..CB64B5C1.Up2Date
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\BiTikla.WebApi.dll
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\refint\BiTikla.WebApi.dll
