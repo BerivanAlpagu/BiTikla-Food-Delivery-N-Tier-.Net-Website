@@ -1,4 +1,4 @@
-﻿using BiTikla.BusinessLayer.Dtos.Concrete;
+using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,9 +31,9 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpGet("available")]
-        public IActionResult GetAvailable()
+        public async Task<IActionResult> GetAvailable()
         {
-            var values = _courierManager.GetActives();
+            var values = await _courierManager.GetAvailableAsync();
             return Ok(values);
         }
 

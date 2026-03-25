@@ -1,4 +1,4 @@
-﻿using BiTikla.BusinessLayer.Dtos.Concrete;
+using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,20 +31,16 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpGet("bycategory/{categoryId}")]
-        public IActionResult GetByCategory(int categoryId)
+        public async Task<IActionResult> GetByCategory(int categoryId)
         {
-            var values = _menuItemManager.GetActives()
-                .Where(x => x.CategoryId == categoryId)
-                .ToList();
+            var values = await _menuItemManager.GetByCategoryIdAsync(categoryId);
             return Ok(values);
         }
 
         [HttpGet("byrestaurant/{restaurantId}")]
-        public IActionResult GetByRestaurant(int restaurantId)
+        public async Task<IActionResult> GetByRestaurant(int restaurantId)
         {
-            var values = _menuItemManager.GetActives()
-                .Where(x => x.CategoryId != 0)
-                .ToList();
+            var values = await _menuItemManager.GetByRestaurantIdAsync(restaurantId);
             return Ok(values);
         }
 

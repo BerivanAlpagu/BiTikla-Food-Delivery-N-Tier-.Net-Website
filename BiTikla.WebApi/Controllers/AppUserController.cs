@@ -8,10 +8,6 @@ namespace BiTikla.WebApi.Controllers
     [ApiController]
     public class AppUserController : ControllerBase
     {
-        public class LoginDto {
-            public string Email { get; set; }
-            public string Password { get; set; }
-        }
 
         private readonly IAppUserManager _appUserManager;
 

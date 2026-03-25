@@ -147,3 +147,5 @@ C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Microsoft.Ext
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Bogus.dll
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\FluentValidation.dll
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+c:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+c:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
