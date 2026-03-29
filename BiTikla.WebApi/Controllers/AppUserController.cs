@@ -1,5 +1,6 @@
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
+using BiTikla.WebApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BiTikla.WebApi.Controllers
@@ -10,10 +11,12 @@ namespace BiTikla.WebApi.Controllers
     {
 
         private readonly IAppUserManager _appUserManager;
+        private readonly ITokenService _tokenService;
 
-        public AppUserController(IAppUserManager appUserManager)
+        public AppUserController(IAppUserManager appUserManager, ITokenService tokenService)
         {
             _appUserManager = appUserManager;
+            _tokenService = tokenService;
         }
 
         [HttpGet]
@@ -35,9 +38,15 @@ namespace BiTikla.WebApi.Controllers
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
             var values = await _appUserManager.GetAllAsync();
-            var user = values.FirstOrDefault(x => x.Email == loginDto.Email && x.Password == loginDto.Password);
-            if (user == null) return Unauthorized(new { message = "Email veya şifre hatalı" });
-            return Ok(user);
+            var user = values.FirstOrDefault(x => x.Email == loginDto.Email);
+
+            // BCrypt kullanarak Hash eşleşmesi yapıyoruz
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Password))
+                return Unauthorized(new { message = "Email veya şifre hatalı" });
+
+            // Şifre doğruysa Token üret
+            var tokenString = _tokenService.GenerateToken(user);
+            return Ok(new { Token = tokenString, User = user });
         }
 
         [HttpPost]
