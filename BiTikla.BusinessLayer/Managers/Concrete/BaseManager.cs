@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,7 @@ namespace BiTikla.BusinessLayer.Managers.Concrete
         where TDto : BaseDto
         where TEntity : BaseEntity
     {
-        private readonly IRepository<TEntity> _repository;
+        protected readonly IRepository<TEntity> _repository;
         protected readonly IMapper _mapper;
 
         protected BaseManager(IRepository<TEntity> repository, IMapper mapper)
@@ -50,36 +50,37 @@ namespace BiTikla.BusinessLayer.Managers.Concrete
             return _mapper.Map<List<TDto>>(entities);
         }
 
-        public async Task CreateAsync(TDto dto)
+        public virtual async Task CreateAsync(TDto dto)
         {
             var entity = _mapper.Map<TEntity>(dto);
-            entity.CreatedDate = DateTime.Now;
+            entity.CreatedDate = DateTime.UtcNow;
             entity.Status = DataStatus.Inserted;
             await _repository.CreateAsync(entity);
+            dto.Id = entity.Id;
         }
 
-        public async Task UpdateAsync(TDto dto)
+        public virtual async Task UpdateAsync(TDto dto)
         {
             var oldEntity = await _repository.GetByIdAsync(dto.Id);
             var newEntity = _mapper.Map<TEntity>(dto);
-            newEntity.UpdatedDate = DateTime.Now;
+            newEntity.UpdatedDate = DateTime.UtcNow;
             newEntity.Status = DataStatus.Updated;
             await _repository.UpdateAsync(oldEntity, newEntity);
         }
 
-        public async Task<string> SoftDeleteAsync(int id)
+        public virtual async Task<string> SoftDeleteAsync(int id)
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null || entity.Status == DataStatus.Deleted)
                 return "Kayıt bulunamadı veya zaten pasif!";
 
             entity.Status = DataStatus.Deleted;
-            entity.DeletedDate = DateTime.Now;
+            entity.DeletedDate = DateTime.UtcNow;
             await _repository.SaveChangesAsync();
             return $"{id} id'li kayıt pasife alındı.";
         }
 
-        public async Task<string> HardDeleteAsync(int id)
+        public virtual async Task<string> HardDeleteAsync(int id)
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null || entity.Status != DataStatus.Deleted)

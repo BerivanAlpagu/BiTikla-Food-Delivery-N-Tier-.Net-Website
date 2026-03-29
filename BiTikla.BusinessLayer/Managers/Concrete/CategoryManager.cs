@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +17,12 @@ namespace BiTikla.BusinessLayer.Managers.Concrete
         public CategoryManager(ICategoryRepository repository, IMapper mapper)
             : base(repository, mapper)
         {
+        }
+
+        public async Task<List<CategoryDto>> GetByRestaurantIdAsync(int restaurantId)
+        {
+            var entities = await Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync(_repository.Where(x => x.RestaurantId == restaurantId && x.Status != BiTikla.EntityLayer.Enums.DataStatus.Deleted));
+            return _mapper.Map<List<CategoryDto>>(entities);
         }
     }
 }

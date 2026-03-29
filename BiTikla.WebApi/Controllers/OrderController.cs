@@ -59,6 +59,16 @@ namespace BiTikla.WebApi.Controllers
             return Ok("Sipariş güncellendi");
         }
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateOrderStatusDto dto)
+        {
+            var order = await _orderManager.GetByIdAsync(id);
+            if (order == null) return NotFound("Sipariş bulunamadı");
+            
+            await _orderManager.UpdateStatusAsync(id, dto.Status);
+            return Ok("Sipariş durumu güncellendi");
+        }
+
         [HttpPut("softdelete/{id}")]
         public async Task<IActionResult> SoftDelete(int id)
         {

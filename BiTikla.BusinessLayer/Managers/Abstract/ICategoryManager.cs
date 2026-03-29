@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +10,6 @@ namespace BiTikla.BusinessLayer.Managers.Abstract
 {
     public interface ICategoryManager : IManager<CategoryDto>
     {
+        Task<List<CategoryDto>> GetByRestaurantIdAsync(int restaurantId);
     }
 }

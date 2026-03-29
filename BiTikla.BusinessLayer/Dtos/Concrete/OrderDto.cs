@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +16,6 @@ namespace BiTikla.BusinessLayer.Dtos.Concrete
         public int AppUserId { get; set; }
         public int RestaurantId { get; set; }
         public int? CourierId { get; set; }
+        public List<OrderDetailDto> OrderDetails { get; set; }
     }
 }
