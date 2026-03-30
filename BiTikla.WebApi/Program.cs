@@ -113,6 +113,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseCors("AllowReact");
+app.UseStaticFiles(); // Frontend'in wwwroot altındaki resimlere erişmesi için eklendi. SİLME YOK.
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

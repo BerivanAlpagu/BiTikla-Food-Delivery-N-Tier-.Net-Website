@@ -158,3 +158,4 @@ C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\refint\BiTikl
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\BiTikla.WebApi.pdb
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\BiTikla.WebApi.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\obj\Debug\net8.0\ref\BiTikla.WebApi.dll
+C:\Users\ASUS\source\repos\BiTikla\BiTikla.WebApi\bin\Debug\net8.0\BiTikla.WebApi.staticwebassets.runtime.json
