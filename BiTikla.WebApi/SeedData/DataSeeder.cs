@@ -1,4 +1,4 @@
-﻿using Bogus;
+using Bogus;
 using BiTikla.DataAccessLayer.Context;
 using BiTikla.EntityLayer.Enums;
 using BiTikla.EntityLayer.Models.Concrete;
@@ -51,20 +51,29 @@ namespace BiTikla.WebApi.SeedData
             await context.SaveChangesAsync();
 
             // 3. Restoranlar
-            var restaurantNames = new[] {
-                "Burger House", "Pizza Roma", "Sushi Bar",
-                "Döner Palace", "Tantuni Express", "Kebap World",
-                "Lahmacun City", "Pide Corner", "Izgara Plus", "Fast Falafel"
+            var restaurantData = new[]
+            {
+                new { Name = "Burger House",     Image = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" },
+                new { Name = "Pizza Roma",        Image = "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" },
+                new { Name = "Sushi Bar",         Image = "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400&q=80" },
+                new { Name = "Döner Palace",      Image = "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80" },
+                new { Name = "Tantuni Express",   Image = "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80" },
+                new { Name = "Kebap World",       Image = "https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=400&q=80" },
+                new { Name = "Lahmacun City",     Image = "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=400&q=80" },
+                new { Name = "Pide Corner",       Image = "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80" },
+                new { Name = "Izgara Plus",       Image = "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" },
+                new { Name = "Fast Falafel",      Image = "https://images.unsplash.com/photo-1614937563502-69c4a0b3e59e?w=400&q=80" },
             };
 
             var restaurants = new List<Restaurant>();
             for (int i = 0; i < 10; i++)
             {
+                var rd = restaurantData[i];
                 restaurants.Add(new Restaurant
                 {
-                    Name = faker.Random.ArrayElement(restaurantNames) + " " + faker.Address.City(),
+                    Name = rd.Name + " " + faker.Address.City(),
                     Description = faker.Lorem.Sentence(),
-                    ImageUrl = "https://picsum.photos/200",
+                    ImageUrl = rd.Image,
                     Address = faker.Address.StreetAddress(),
                     Latitude = faker.Random.Double(41.0, 41.2),
                     Longitude = faker.Random.Double(28.8, 29.2),
@@ -93,7 +102,7 @@ namespace BiTikla.WebApi.SeedData
                     categories.Add(new Category
                     {
                         CategoryName = faker.Random.ArrayElement(categoryNames),
-                        ImageUrl = "https://picsum.photos/200",
+                        ImageUrl = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80",
                         RestaurantId = restaurant.Id,
                         CreatedDate = DateTime.UtcNow,
                         Status = DataStatus.Inserted
@@ -104,6 +113,18 @@ namespace BiTikla.WebApi.SeedData
             await context.SaveChangesAsync();
 
             // 5. Menü Ürünleri
+            var foodImages = new[]
+            {
+                "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80",
+                "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80",
+                "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80",
+                "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80",
+                "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
+                "https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=400&q=80",
+                "https://images.unsplash.com/photo-1614937563502-69c4a0b3e59e?w=400&q=80",
+                "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=400&q=80",
+            };
+
             var menuItems = new List<MenuItem>();
             foreach (var category in categories)
             {
@@ -114,7 +135,7 @@ namespace BiTikla.WebApi.SeedData
                         Name = faker.Commerce.ProductName(),
                         Description = faker.Lorem.Sentence(),
                         Price = faker.Random.Decimal(20, 200),
-                        ImageUrl = "https://picsum.photos/200",
+                        ImageUrl = faker.Random.ArrayElement(foodImages),
                         IsAvailable = true,
                         CategoryId = category.Id,
                         CreatedDate = DateTime.UtcNow,
