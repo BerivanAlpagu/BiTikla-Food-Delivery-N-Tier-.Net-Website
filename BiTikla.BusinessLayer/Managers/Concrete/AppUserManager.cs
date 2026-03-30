@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using BCrypt.Net;
 using AutoMapper;
+
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using BiTikla.DataAccessLayer.Repositories.Abstract;

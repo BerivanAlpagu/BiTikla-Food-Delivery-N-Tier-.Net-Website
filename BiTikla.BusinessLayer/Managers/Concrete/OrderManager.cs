@@ -51,5 +51,17 @@ namespace BiTikla.BusinessLayer.Managers.Concrete
                 await _orderRepository.SaveChangesAsync();
             }
         }
+
+        public async Task AssignCourierAsync(int orderId, int courierId)
+        {
+            var entity = await _orderRepository.GetByIdAsync(orderId);
+            if (entity != null)
+            {
+                entity.CourierId = courierId;
+                entity.UpdatedDate = DateTime.UtcNow;
+                entity.Status = BiTikla.EntityLayer.Enums.DataStatus.Updated;
+                await _orderRepository.SaveChangesAsync();
+            }
+        }
     }
 }

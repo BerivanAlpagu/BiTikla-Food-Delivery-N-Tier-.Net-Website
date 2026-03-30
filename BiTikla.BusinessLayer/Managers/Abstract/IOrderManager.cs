@@ -11,5 +11,6 @@ namespace BiTikla.BusinessLayer.Managers.Abstract
     public interface IOrderManager : IManager<OrderDto>
     {
         Task UpdateStatusAsync(int orderId, string status);
+        Task AssignCourierAsync(int orderId, int courierId);
     }
 }

@@ -71,6 +71,16 @@ namespace BiTikla.WebApi.Controllers
             return Ok("Sipariş durumu güncellendi");
         }
 
+        [HttpPut("{id}/assign-courier")]
+        public async Task<IActionResult> AssignCourier(int id, [FromBody] AssignCourierDto dto)
+        {
+            var order = await _orderManager.GetByIdAsync(id);
+            if (order == null) return NotFound("Sipariş bulunamadı");
+            
+            await _orderManager.AssignCourierAsync(id, dto.CourierId);
+            return Ok("Siparişe kurye başarıyla atandı");
+        }
+
         [HttpPut("softdelete/{id}")]
         public async Task<IActionResult> SoftDelete(int id)
         {
