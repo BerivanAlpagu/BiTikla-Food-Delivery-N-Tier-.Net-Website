@@ -371,9 +371,6 @@ namespace BiTikla.DataAccessLayer.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<decimal>("DeliveryFee")
-                        .HasColumnType("numeric(18,2)");
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");

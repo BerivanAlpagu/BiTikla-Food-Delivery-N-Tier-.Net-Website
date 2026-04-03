@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,7 @@ namespace BiTikla.EntityLayer.Models.Concrete
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public decimal MinOrderPrice { get; set; }
-        public decimal DeliveryFee { get; set; }
+
         public int EstimatedDeliveryTime { get; set; } // Dakika cinsinden
         public double Rating { get; set; }
 

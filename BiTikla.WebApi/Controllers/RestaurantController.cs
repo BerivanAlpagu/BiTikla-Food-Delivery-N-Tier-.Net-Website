@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +10,12 @@ namespace BiTikla.WebApi.Controllers
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantManager _restaurantManager;
+        private readonly IMenuItemManager _menuItemManager;
 
-        public RestaurantController(IRestaurantManager restaurantManager)
+        public RestaurantController(IRestaurantManager restaurantManager, IMenuItemManager menuItemManager)
         {
             _restaurantManager = restaurantManager;
+            _menuItemManager = menuItemManager;
         }
 
         [HttpGet]
@@ -41,6 +43,8 @@ namespace BiTikla.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(RestaurantDto dto)
         {
+            // GÜVENLİK: minOrderPrice'ı dışarıdan kabul etmiyoruz, 0 olarak başlat
+            dto.MinOrderPrice = 0;
             await _restaurantManager.CreateAsync(dto);
             return Ok("Restoran eklendi");
         }
@@ -48,6 +52,13 @@ namespace BiTikla.WebApi.Controllers
         [HttpPut]
         public async Task<IActionResult> Update(RestaurantDto dto)
         {
+            // GÜVENLİK: minOrderPrice'ı menü ürünlerinin en düşüğü fiyatından otomatik hesapla
+            var menuItems = await _menuItemManager.GetByRestaurantIdAsync(dto.Id);
+            if (menuItems != null && menuItems.Any())
+                dto.MinOrderPrice = menuItems.Min(x => x.Price);
+            else
+                dto.MinOrderPrice = 0; // Henüz ürün yoksa 0
+
             await _restaurantManager.UpdateAsync(dto);
             return Ok("Restoran güncellendi");
         }

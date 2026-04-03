@@ -78,7 +78,7 @@ namespace BiTikla.WebApi.SeedData
                     Latitude = faker.Random.Double(41.0, 41.2),
                     Longitude = faker.Random.Double(28.8, 29.2),
                     MinOrderPrice = faker.Random.Decimal(30, 100),
-                    DeliveryFee = faker.Random.Decimal(5, 25),
+
                     EstimatedDeliveryTime = faker.Random.Int(15, 60),
                     Rating = Math.Round(faker.Random.Double(3.0, 5.0), 1),
                     CreatedDate = DateTime.UtcNow,
