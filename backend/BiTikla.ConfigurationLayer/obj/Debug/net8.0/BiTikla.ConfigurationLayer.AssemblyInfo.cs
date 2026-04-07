@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiTikla.ConfigurationLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f9621011032fb73195f26b8e6e38dc432551889")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99bef7421531ef72a003e80b58fa85b1076e2a6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiTikla.ConfigurationLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiTikla.ConfigurationLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
