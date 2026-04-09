@@ -25,7 +25,12 @@ function LoginPage() {
       // Backend artık token ve user nesnesi dönüyor (camelCase olarak çevrilmiş)
       login(res.data.user, res.data.token);
       showToast('Başarıyla giriş yapıldı! Hoş geldiniz 🎉', 'success');
-      navigate('/');
+      
+      if (res.data.user.role === 'Admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     } catch (err) {
       showToast('Giriş başarısız. E-posta veya şifre hatalı!', 'error');
       setError('Giriş başarısız. Lütfen bilgilerinizi kontrol edin.');

@@ -1,6 +1,7 @@
 using AutoMapper;
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BiTikla.WebApi.Controllers
@@ -41,6 +42,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(RestaurantDto dto)
         {
             // GÜVENLİK: minOrderPrice'ı dışarıdan kabul etmiyoruz, 0 olarak başlat
@@ -50,6 +52,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(RestaurantDto dto)
         {
             // GÜVENLİK: minOrderPrice'ı menü ürünlerinin en düşüğü fiyatından otomatik hesapla
@@ -64,6 +67,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPut("softdelete/{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> SoftDelete(int id)
         {
             var result = await _restaurantManager.SoftDeleteAsync(id);
@@ -71,6 +75,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> HardDelete(int id)
         {
             var result = await _restaurantManager.HardDeleteAsync(id);

@@ -1,5 +1,6 @@
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BiTikla.WebApi.Controllers
@@ -39,6 +40,7 @@ namespace BiTikla.WebApi.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(CategoryDto dto)
         {
             await _categoryManager.CreateAsync(dto);
@@ -46,6 +48,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(CategoryDto dto)
         {
             await _categoryManager.UpdateAsync(dto);

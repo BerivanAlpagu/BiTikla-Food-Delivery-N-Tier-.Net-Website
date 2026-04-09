@@ -1,5 +1,6 @@
 using BiTikla.BusinessLayer.Dtos.Concrete;
 using BiTikla.BusinessLayer.Managers.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BiTikla.WebApi.Controllers
@@ -45,6 +46,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(MenuItemDto dto)
         {
             await _menuItemManager.CreateAsync(dto);
@@ -52,6 +54,7 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Update(MenuItemDto dto)
         {
             await _menuItemManager.UpdateAsync(dto);
@@ -66,7 +69,8 @@ namespace BiTikla.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> HardDelete(int id)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Delete(int id)
         {
             var result = await _menuItemManager.HardDeleteAsync(id);
             return Ok(result);

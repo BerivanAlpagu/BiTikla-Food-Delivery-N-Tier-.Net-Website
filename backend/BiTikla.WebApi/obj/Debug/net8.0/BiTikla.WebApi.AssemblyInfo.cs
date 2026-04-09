@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BiTikla.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99bef7421531ef72a003e80b58fa85b1076e2a6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e2430ff615583f1c0d91658f8a4d5744aed8099")]
 [assembly: System.Reflection.AssemblyProductAttribute("BiTikla.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BiTikla.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

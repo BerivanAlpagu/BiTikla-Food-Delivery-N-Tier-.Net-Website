@@ -34,6 +34,26 @@ namespace BiTikla.WebApi.SeedData
 
             // 2. Kullanıcılar
             var users = new List<AppUser>();
+            
+            // TEST İÇİN SABİT HESAPLAR
+            users.Add(new AppUser {
+                UserName = "admin",
+                Email = "admin@bitikla.com",
+                Password = "admin123",
+                Role = "Admin",
+                CreatedDate = DateTime.UtcNow,
+                Status = DataStatus.Inserted
+            });
+
+            users.Add(new AppUser {
+                UserName = "customer",
+                Email = "customer@bitikla.com",
+                Password = "customer123",
+                Role = "Customer",
+                CreatedDate = DateTime.UtcNow,
+                Status = DataStatus.Inserted
+            });
+
             for (int i = 0; i < 50; i++)
             {
                 users.Add(new AppUser

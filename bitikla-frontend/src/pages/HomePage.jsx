@@ -61,8 +61,10 @@ function HomePage() {
               <span style={styles.greeting}>Merhaba, {user?.name || user?.email || 'Kullanıcı'}</span>
               <button style={styles.navButton} onClick={() => navigate('/my-orders')}>Siparişlerim</button>
               
-              {/* ŞİMDİLİK TEST İÇİN HERKESE AÇIK (Gerçekte role === 'Admin' olmalı) */}
-              <button style={{...styles.navButton, backgroundColor: '#0984e3'}} onClick={() => navigate('/admin')}>Yönetim Paneli</button>
+              {/* Sadece Admin rolündekiler görebilir */}
+              {user?.role === 'Admin' && (
+                <button style={{...styles.navButton, backgroundColor: '#0984e3'}} onClick={() => navigate('/admin')}>Yönetim Paneli</button>
+              )}
 
               <button style={{...styles.navButton, ...styles.logoutButton}} onClick={logout}>Çıkış Yap</button>
             </div>
